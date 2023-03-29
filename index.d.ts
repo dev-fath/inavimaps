@@ -9,7 +9,7 @@ declare namespace inavi.maps {
     // --------------------------------------------------------------------------
     //  Types
     // --------------------------------------------------------------------------
-    type EventType =
+    export type EventType =
         | 'mousedown'
         | 'mouseup'
         | 'click'
@@ -24,9 +24,9 @@ declare namespace inavi.maps {
         | 'touchend'
         | 'touchcancel';
 
-    type MapType = 'NORMAL' | 'SATELLITE';
+    export type MapType = 'NORMAL' | 'SATELLITE';
 
-    type AnchorType =
+    export type AnchorType =
         | 'top-left'
         | 'top'
         | 'top-right'
@@ -37,43 +37,43 @@ declare namespace inavi.maps {
         | 'bottom'
         | 'bottom-right';
 
-    type LngLatArrayLiteral = [number, number];
-    type PixelArrayLiteral = [number, number];
+    export type LngLatArrayLiteral = [number, number];
+    export type PixelArrayLiteral = [number, number];
 
-    type LngLatLike = LngLat | LngLatObjectLiteral | LngLatArrayLiteral;
-    type TWLngLatLike = TWLngLat | LngLatObjectLiteral | LngLatArrayLiteral;
-    type TWLngLatBoundsLike = [TWLngLatLike, TWLngLatLike];
-    type PixelLike = PixelObjectLiteral | PixelArrayLiteral;
-    type PixelBoundsLike = [PixelObjectLiteral, PixelObjectLiteral] | [PixelArrayLiteral, PixelArrayLiteral];
+    export type LngLatLike = LngLat | LngLatObjectLiteral | LngLatArrayLiteral;
+    export type TWLngLatLike = TWLngLat | LngLatObjectLiteral | LngLatArrayLiteral;
+    export type TWLngLatBoundsLike = [TWLngLatLike, TWLngLatLike];
+    export type PixelLike = PixelObjectLiteral | PixelArrayLiteral;
+    export type PixelBoundsLike = [PixelObjectLiteral, PixelObjectLiteral] | [PixelArrayLiteral, PixelArrayLiteral];
 
-    type LngLatBoundsLike = [LngLatLike, LngLatLike];
+    export type LngLatBoundsLike = [LngLatLike, LngLatLike];
 
-    type CircleStyle = FigureStyle;
-    type PolygonStyle = FigureStyle;
+    export type CircleStyle = FigureStyle;
+    export type PolygonStyle = FigureStyle;
 
-    type CompassControlOptions = ControlOptions;
-    type ZoomControlOptions = ControlOptions;
+    export type CompassControlOptions = ControlOptions;
+    export type ZoomControlOptions = ControlOptions;
 
     // --------------------------------------------------------------------------
     //  Interfaces
     // --------------------------------------------------------------------------
-    interface LngLatObjectLiteral {
+    export interface LngLatObjectLiteral {
         lat: number;
         lng: number;
     }
 
-    interface PixelObjectLiteral {
+    export interface PixelObjectLiteral {
         x: number;
         y: number;
     }
 
-    interface FigureStyle {
+    export interface FigureStyle {
         fillOpacity: number;
         fillColor: string;
         fillOutlineColor: string;
     }
 
-    interface PolylineStyle {
+    export interface PolylineStyle {
         lineColor: string;
         lineOpacity: number;
         lineWidth: number;
@@ -82,51 +82,51 @@ declare namespace inavi.maps {
         lineDashArray: number[];
     }
 
-    interface LabelStyle {
+    export interface LabelStyle {
         textColor: string;
         textOpacity: number;
         textHaloColor: string;
         textHaloWidth: number;
     }
 
-    interface CircleOptions {
+    export interface CircleOptions {
         map?: Map;
         position?: LngLatLike;
         radius?: number;
         style?: PolygonStyle;
     }
 
-    interface PaddingOptions {
+    export interface PaddingOptions {
         top: number;
         bottom: number;
         left: number;
         right: number;
     }
 
-    interface PanOptions {
+    export interface PanOptions {
         heading: number;
         tilt: number;
         duration: number;
     }
 
-    interface FitOptions extends PanOptions {
+    export interface FitOptions extends PanOptions {
         padding: number | PaddingOptions;
         zoom: number;
     }
 
-    interface ZoomOptions {
+    export interface ZoomOptions {
         duration: number;
     }
 
-    interface ControlOptions {
+    export interface ControlOptions {
         position: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
     }
 
-    interface LogoScaleControlOptions extends ControlOptions {
+    export interface LogoScaleControlOptions extends ControlOptions {
         showScale: boolean;
     }
 
-    interface MapOptions {
+    export interface MapOptions {
         container: string;
         type?: MapType;
         center?: LngLatLike | TWLngLatLike;
@@ -145,7 +145,7 @@ declare namespace inavi.maps {
         zoomControl?: ZoomControlOptions;
     }
 
-    interface InfoWindowOptions {
+    export interface InfoWindowOptions {
         position: LngLatLike;
         map: Map;
         anchor: AnchorType;
@@ -156,14 +156,14 @@ declare namespace inavi.maps {
         closeButton: boolean;
     }
 
-    interface LabelOptions {
+    export interface LabelOptions {
         map: Map;
         position: LngLatLike;
         text: string;
         style: LabelStyle;
     }
 
-    interface MarkerOptions {
+    export interface MarkerOptions {
         icon: string;
         anchor: AnchorType;
         offset: number | [number, number];
@@ -174,19 +174,19 @@ declare namespace inavi.maps {
         opacity: number;
     }
 
-    interface MarkerClustererIcon {
+    export interface MarkerClustererIcon {
         url: string;
         size: [number, number];
         position: [number, number];
     }
 
-    interface MarkerClustererOptions {
+    export interface MarkerClustererOptions {
         gridSize: number;
         steps: number[];
         icons: MarkerClustererIcon[];
     }
 
-    interface FeatureOptions {
+    export interface FeatureOptions {
         map: Map;
         path: LngLatLike[];
         style: PolygonStyle | PolylineStyle;
