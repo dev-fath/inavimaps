@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Type definitions for iNavi Maps Api Javascript API 3.0",
   "main": "",
-  "types": "types/index.d.ts",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/sylee-dev/inavimaps.git"
