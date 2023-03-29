@@ -2,7 +2,7 @@
   "name": "@types/inavimaps",
   "version": "0.0.1",
   "description": "Type definitions for iNavi Maps Api Javascript API 3.0",
-  "main": "",
+  "main": "index.js",
   "types": "index.d.ts",
   "repository": {
     "type": "git",
