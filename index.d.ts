@@ -195,7 +195,7 @@ declare namespace inavi.maps {
     /**
      * Pixel
      */
-    class Pixel {
+    export class Pixel {
         constructor(x: number, y: number);
 
         static convertToLngLat(map: Map, pixel: Pixel): LngLat;
@@ -207,7 +207,7 @@ declare namespace inavi.maps {
     /**
      * TWLngLatBounds
      */
-    class TWLngLatBounds {
+    export class TWLngLatBounds {
         constructor(southWest: LngLatLike, northEast: LngLatLike);
 
         convertToLngLatBounds(): LngLatBounds;
@@ -227,7 +227,7 @@ declare namespace inavi.maps {
     /**
      * LngLatBounds
      */
-    class LngLatBounds {
+    export class LngLatBounds {
         constructor(southWest: LngLatLike, northEast: LngLatLike);
 
         convertToPixelBounds(map: Map, precision?: boolean): PixelBounds;
@@ -247,7 +247,7 @@ declare namespace inavi.maps {
     /**
      * PixelBounds
      */
-    class PixelBounds {
+    export class PixelBounds {
         constructor(southWest: LngLatLike, northEast: LngLatLike);
 
         convertToLngLatBounds(map: Map, pixelBoundsLike?: PixelBoundsLike): LngLatBounds;
@@ -266,7 +266,7 @@ declare namespace inavi.maps {
     /**
      * MapEventListener
      */
-    class MapEventListener<T> {
+    export class MapEventListener<T> {
         off(eventType?: EventType, listener?: () => any): T;
         on(eventType?: EventType, listener?: () => any): T;
         once(eventType?: EventType, listener?: () => any): T;
@@ -275,7 +275,7 @@ declare namespace inavi.maps {
     /**
      * LngLat
      */
-    class LngLat {
+    export class LngLat {
         constructor(lng: number, lat: number);
 
         convertToPixel(map: Map, precision?: boolean): Pixel;
@@ -287,7 +287,7 @@ declare namespace inavi.maps {
     /**
      * TWLngLat
      */
-    class TWLngLat {
+    export class TWLngLat {
         constructor(lng: number, lat: number);
 
         convertToLngLat(twLngLatLike?: TWLngLatLike): LngLat;
@@ -297,7 +297,7 @@ declare namespace inavi.maps {
     /**
      * Map
      */
-    class Map extends MapEventListener<Map> {
+    export class Map extends MapEventListener<Map> {
         constructor(mapOptions: MapOptions);
 
         fitbounds(lngLatBoundsLike: LngLatBoundsLike, fitOptions?: FitOptions): void;
@@ -337,7 +337,7 @@ declare namespace inavi.maps {
     /**
      * Circle
      */
-    class Circle extends MapEventListener<Circle> {
+    export class Circle extends MapEventListener<Circle> {
         constructor(circleOptions?: CircleOptions);
 
         getDraggable(): boolean;
@@ -359,14 +359,14 @@ declare namespace inavi.maps {
     /**
      * CustomInfoWindow
      */
-    class CustomInfoWindow extends InfoWindow {
+    export class CustomInfoWindow extends InfoWindow {
         constructor(infoWindowOptions?: InfoWindowOptions);
     }
 
     /**
      * InfoWindow
      */
-    class InfoWindow extends MapEventListener<InfoWindow> {
+    export class InfoWindow extends MapEventListener<InfoWindow> {
         constructor(infoWindowOptions: InfoWindowOptions);
 
         getContent(): string | HTMLElement;
@@ -386,7 +386,7 @@ declare namespace inavi.maps {
     /**
      * Label
      */
-    class Label extends MapEventListener<Label> {
+    export class Label extends MapEventListener<Label> {
         constructor(labelOptions: LabelOptions);
 
         getDraggable(): void;
@@ -408,7 +408,7 @@ declare namespace inavi.maps {
     /**
      * LogoScaleControl
      */
-    class LogoScaleControl {
+    export class LogoScaleControl {
         constructor(logoScaleControlOptions: LogoScaleControlOptions);
 
         addTo(map: Map): void;
@@ -420,7 +420,7 @@ declare namespace inavi.maps {
     /**
      * Marker
      */
-    class Marker extends MapEventListener<Marker> {
+    export class Marker extends MapEventListener<Marker> {
         constructor(markerOptions: MarkerOptions);
 
         getDraggable(): void;
@@ -444,7 +444,7 @@ declare namespace inavi.maps {
     /**
      * MarkerClusterer
      */
-    class MarkerClusterer extends MapEventListener<MarkerClusterer> {
+    export class MarkerClusterer extends MapEventListener<MarkerClusterer> {
         constructor(map: Map, markerClustererOptions: MarkerClustererOptions, markers?: Marker[]);
 
         addMarker(marker: Marker): void;
@@ -471,7 +471,7 @@ declare namespace inavi.maps {
     /**
      * Polygon
      */
-    class Polygon extends MapEventListener<Polygon> {
+    export class Polygon extends MapEventListener<Polygon> {
         constructor(polygonOptions: FeatureOptions);
 
         getDraggable(): boolean;
@@ -491,7 +491,7 @@ declare namespace inavi.maps {
     /**
      * Polyline
      */
-    class Polyline extends MapEventListener<Polyline> {
+    export class Polyline extends MapEventListener<Polyline> {
         constructor(polylineOptions: FeatureOptions);
 
         getDraggable(): boolean;
@@ -511,7 +511,7 @@ declare namespace inavi.maps {
     /**
      * ZoomControl
      */
-    class ZoomControl {
+    export class ZoomControl {
         constructor(options: ZoomControlOptions);
 
         addTo(map: Map): void;
