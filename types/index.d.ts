@@ -5,7 +5,7 @@
 
 // iNavi Maps Api Javascript API 3.0
 
-declare namespace inavi.maps {
+declare module inavi.maps {
     // --------------------------------------------------------------------------
     //  Types
     // --------------------------------------------------------------------------
